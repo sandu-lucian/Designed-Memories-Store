@@ -21,7 +21,7 @@ body {
 /* Left-side */
 
 .bg-image {
-  background: url("loginpic.jpg");
+  background: url("../images/loginpic.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
