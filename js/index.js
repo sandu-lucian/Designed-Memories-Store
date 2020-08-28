@@ -4,11 +4,12 @@ let loginBtn = document.getElementById("form-button");
 let emailStatus = document.getElementById("email-status");
 let passStatus = document.getElementById("pass-status");
 let homepageBtn = document.getElementById("left-btn");
+let form = document.querySelector("form");
 
 let emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let passRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10}/g;
 
-homepageBtn.addEventListener("click", goToHomepage);
+/* homepageBtn.addEventListener("click", goToHomepage);
 emailInput.addEventListener("keyup", validateEmail);
 passInput.addEventListener("keyup", validatePass);
 loginBtn.addEventListener("click", validateCredentials);
@@ -49,4 +50,21 @@ function validateCredentials(event) {
     if(emailInput.value.match(emailRegEx) && passInput.value.match(passRegEx)) {
         window.location = "main.html"
     }
-}
+} */
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+  
+    fetch("http://localhost:3000/api/login", {
+      method: "POST",
+      body: JSON.stringify({
+        email: emailInput.value,
+        password: passInput.value,
+      }),
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        sessionStorage.setItem("token", r.token);
+        window.location.assign("main.html");
+      });
+  });

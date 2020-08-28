@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/header-nav-footer.css" />
+    <link rel="stylesheet" href="./css/products-page.css" />
+    <link rel="stylesheet" href="./css/favorites.css" />
+    <title>Designed Memories</title>
+  </head>
+  <body>
+    <header>
+      <a href="main.html"><img
+        id="logo-dm"
+        src="./images/logodesignedmemories.jpg"
+        alt="Logo Designed Memories Store"
+      /></a>
+      <div id="searchbar-container">
+        <img src="./images/search.png" alt="search" />
+        <input
+          type="search"
+          id="searchbar"
+          placeholder="Cauta produsele dorite"
+        />
+      </div>
+      <div id="header-btn-container">
+        <a href="./account.html"
+          ><button class="header-btn">Contul meu
+          </button></a
+        >
+        <a href="./favorites.html"
+          ><button class="header-btn">Favorite
+          </button></a
+        >
+        <a href="./cart.html"
+          ><button class="header-btn">Cosul meu
+          </button></a
+        >
+      </div>
+    </header>
+
+    <div id="fav-list"></div>
+
+    <footer class="footer">
+        <div class="left-side">
+          <span
+            >Copyright &copy; 2020 by Designed Memories Store. All rights
+            reserved.</span
+          >
+        </div>
+        <div class="right-side">
+          <ul>
+            <li>Ne gasiti si pe Social Media</li>
+            <li>
+              <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope-square fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+  
+      <script src="./simple-server/index.js"></script>
+      <script src="./js/favorites.js"></script>
+    </body>
+  </html>

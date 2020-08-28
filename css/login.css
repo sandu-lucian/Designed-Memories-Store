@@ -14,7 +14,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: [left] 50% [right] 50%;
+  grid-template-columns: [left] 1fr [right] 2fr;
   grid-template-rows: 100%;
 }
 
