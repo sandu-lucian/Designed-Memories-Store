@@ -1,13 +1,15 @@
 let productsList = document.getElementById("products-list");
+let searchbar = document.getElementById("searchbar");
+let searchBtn = document.getElementById("mag-glass");
 
 let selectedFilter = [];
 let prodsList;
 let filteredList;
 let favoritesList;
+let searchList = [];
 
 let displayStyle = "card";
 
-//IIFE that fetches products
 (function fetchList() {
   fetch("http://localhost:3000/api/products")
     .then((r) => r.json())
@@ -31,37 +33,6 @@ function tagFavorites(data) {
     heart.getElementsByClassName('fa')[0].classList.remove('fa-heart-o');
   });
 }
-
-// Old render function
-/* function renderProductsList(data) {
-  for (let i = 0; i < data.length; i++) {
-    let productDiv = document.createElement("div");
-    productDiv.classList.add("product-div");
-    productDiv.id = data[i].id;
-
-    let prodImg = document.createElement("img");
-    prodImg.setAttribute("src", `${data[i].img}`);
-
-    let nameDiv = document.createElement("div");
-    nameDiv.innerText = `${data[i].name}`;
-
-    let descriptionSpan = document.createElement("span");
-    descriptionSpan.innerText = `${data[i].description}`;
-
-    let priceDiv = document.createElement("div");
-    priceDiv.innerText = `Price: ${data[i].price}`;
-
-    let addToCartBtn = document.createElement("button");
-    addToCartBtn.innerText = "Adauga in cos";
-
-    productDiv.appendChild(prodImg);
-    productDiv.appendChild(nameDiv);
-    productDiv.appendChild(descriptionSpan);
-    productDiv.appendChild(priceDiv);
-    productDiv.appendChild(addToCartBtn);
-    productsList.appendChild(productDiv);
-  }
-} */
 
 function renderProductsList(data, type) {
   for (let i = 0; i < data.length; i++) {
@@ -194,19 +165,21 @@ productsList.addEventListener("click", function (event) {
   if(event.target.classList.contains("fa-heart-o")) {
     event.target.classList.remove("fa-heart-o");
     event.target.classList.add("fa-heart");
+    event.target.setAttribute("style", "color: red");
     fetch(`http://localhost:3000/api/products/favorites/${selectedObj[0].id}`, {
       method: "POST"
     })
   } else if (event.target.classList.contains("fa-heart")) {
     event.target.classList.remove("fa-heart");
     event.target.classList.add("fa-heart-o");
+    event.target.setAttribute("style", "color: black");
     fetch(`http://localhost:3000/api/products/favorites/${selectedObj[0].id}`, {
       method: "DELETE"
     })
   }
 
   if(event.target.classList.contains("card") || event.target.classList.contains("list")) {
-    window.location = `./productViewer.html?${event.target.id}`;
+    window.location = `./productViewer.html?id=${event.target.id}`;
 }
 
   if(event.target.name === "cartBtn") {
@@ -247,3 +220,22 @@ document.getElementById("card-btn").addEventListener("click", function(e) {
       tagFavorites(favoritesList)
 })
 });
+
+searchbar.addEventListener("keyup", function (e) {
+  searchList = [];
+
+  for (let i = 0; i < prodsList.length; i++) {
+    let lowercaseName = prodsList[i].name.toLowerCase();
+    if (lowercaseName.match(`${searchbar.value}`)) {
+      searchList.push(prodsList[i]);
+    }
+  }
+
+  console.log(searchList);
+  productsList.innerHTML = "";
+  renderProductsList(searchList, displayStyle);
+});
+
+document.getElementById("logout-btn").addEventListener("click", function(event) {
+  handleLogout();
+})

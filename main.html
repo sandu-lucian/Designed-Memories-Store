@@ -12,18 +12,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./css/header-nav-footer.css" />
+    <link rel="stylesheet" href="./css/common-styles.css" />
     <link rel="stylesheet" href="./css/products-page.css" />
     <title>Designed Memories</title>
   </head>
   <body>
     <header>
-      <img
+      <div>
+      <a href="main.html"><img
         id="logo-dm"
         src="./images/logodesignedmemories.jpg"
         alt="Logo Designed Memories Store"
-      />
+      /></a>
+      </div>
       <div id="searchbar-container">
-        <img src="./images/search.png" alt="search" />
+        <img src="./images/search.png" alt="search" id="mag-glass"/>
         <input
           type="search"
           id="searchbar"
@@ -31,10 +34,6 @@
         />
       </div>
       <div id="header-btn-container">
-        <a href="./account.html"
-          ><button class="header-btn">Contul meu
-          </button></a
-        >
         <a href="./favorites.html"
           ><button class="header-btn">Favorite
           </button></a
@@ -43,13 +42,25 @@
           ><button class="header-btn">Cosul meu
           </button></a
         >
+        <a href="./contact.html"
+          ><button class="header-btn">Contact
+          </button></a
+        >
+        <button class="header-btn" id="logout-btn">Logout</button>
+
+        <div class="dropdown">
+          <button onclick="displayDropdownMenu()" class="dropbtn"><i class="fa fa-bars dropbtn" aria-hidden="true"></i></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="./favorites.html">Favorite</a>
+            <a href="./cart.html">Cosul meu</a>
+            <a href="./contact.html">Contact</a>
+            <a href="#" onclick="handleLogout()">Logout</a>
+          </div>
+        </div>
       </div>
     </header>
 
     <nav>
-      <button class="nav-btn"><a href="./main.html">Prima pagina</a></button>
-      <button class="nav-btn">Produsele noastre</button>
-      <button class="nav-btn"><a href="./contact.html">Contact</a></button>
     </nav>
 
     <div class="main">
@@ -101,10 +112,11 @@
       </div>
       <div class="right-side">
         <ul>
-          <li>Ne gasiti si pe Social Media</li>
+          <!-- <li>Ne gasiti si pe Social Media</li> -->
           <li>
             <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
           </li>
+          <li><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdesignedmemoriesstore&width=100&layout=button_count&action=like&size=large&share=true&height=46&appId" width="230" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></li>
           <li>
             <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
           </li>
@@ -115,7 +127,8 @@
       </div>
     </footer>
 
-    <script src="./simple-server/index.js"></script>
+    <script src="./backend/index.js"></script>
+    <script src="./js/common-scripts.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

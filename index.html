@@ -3,33 +3,122 @@
   <head>
     <title>Login</title>
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/login-signup.css" />
+    <link rel="stylesheet" href="./css/common-styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
     <div class="container">
-      <div class="left-container bg-image">
-        <button id="left-btn">Hai pe prima pagina!</button>
+      <div class="left-container">
+        <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdesignedmemoriesstore&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+          width="500"
+          height="700"
+          style="border: none; overflow: hidden"
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+        ></iframe>
       </div>
 
       <div class="right-container">
-        <form class="form">
+        <form class="login-form">
           <img src="./images/logodesignedmemories.jpg" id="form-logo" />
           <h1 id="form-h1">Bun venit!</h1>
-          <input type="text" id="email" autocomplete="off" required>
-        <label for="email" class="email-label">
-            <span class="email-content">Email</span></label>
-        <input type="password" id="pass" required>
-        <label for="pass" class="pass-label">
-            <span class="pass-content">Parola</span></label>
-            <button type="submit" id="form-button">LOG IN</button>
+          <input type="text" id="email" autocomplete="off" required />
+          <label for="email" class="email-label">
+            <span class="email-content">Email</span></label
+          >
+          <input type="password" id="pass" required />
+          <label for="pass" class="pass-label">
+            <span class="pass-content">Parola</span></label
+          >
+          <button type="submit" id="form-button" class="btn-anim">LOG IN</button>
+          <a href="#" id="login-to-signup-link" class="login-signup-link"
+            >Nu ai cont inca? Click aici!</a
+          >
         </form>
-        <p id="email-status"></p>
-        <p id="pass-status"></p>
+
+        <form class="signup-form hidden">
+          <img src="./images/logodesignedmemories.jpg" id="form-logo" />
+          <h1 id="form-h1">Bun venit!</h1>
+
+          <div>
+            <label for="lastname-input">Nume: </label>
+            <input
+              type="text"
+              id="lastname-input"
+              placeholder="Nume..."
+              required
+            />
+            <input
+              type="text"
+              id="firstname-input"
+              placeholder="Prenume..."
+              required
+            />
+            <i class="fa fa-times invalid-credential" aria-hidden="true" style="visibility: hidden;"></i>
+          </div>
+
+          <div id="signup-email-div">
+            <label for="signup-email">Email: </label>
+            <input
+              type="text"
+              id="signup-email"
+              autocomplete="off"
+              placeholder="Adresa email..."
+              required
+            />
+            <input
+              type="text"
+              id="email-verifier-input"
+              autocomplete="off"
+              placeholder="Repeta adresa..."
+              required
+            />
+            <i class="fa fa-times invalid-credential invisible" id="email-check" aria-hidden="true"></i>
+          </div>
+          <span id="email-status" class="invalid-credential"> </span>
+
+          <div id="signup-pass-div">
+            <label for="signup-password">Parola: </label>
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Parola..."
+              required
+            />
+            <input
+              type="password"
+              id="password-verifier-input"
+              placeholder="Repeta parola..."
+              required
+            />
+            <i class="fa fa-times invalid-credential invisible" id="password-check" aria-hidden="true"></i>
+          </div>
+          <span id="pass-status" class="invalid-credential"> </span>
+
+          <button type="submit" id="signup-button" class="btn-anim">SIGN UP</button>
+          <a href="#" id="signup-to-login-link" class="login-signup-link"
+            >Ai cont deja? Click aici!</a
+          >
+        </form>
+
+        
+        
       </div>
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/signup.js"></script>
   </body>
 </html>

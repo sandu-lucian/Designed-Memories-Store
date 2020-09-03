@@ -19,5 +19,3 @@ app.use("/api/products", products);
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
-
-//aici setez endpointuri la serverul meu

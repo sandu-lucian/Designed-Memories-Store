@@ -1,0 +1,30 @@
+body {
+    font-family: "Alegreya", serif;
+    margin: 0px;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #fafafa;
+}
+  
+body * {
+    font-family: "Alegreya", serif;
+}
+  
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+  
+.invisible {
+    visibility: hidden;
+}
+
+.btn-anim:active {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}

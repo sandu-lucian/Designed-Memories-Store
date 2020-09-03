@@ -12,47 +12,65 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./css/header-nav-footer.css" />
+    <link rel="stylesheet" href="./css/common-styles.css" />
     <link rel="stylesheet" href="./css/products-page.css" />
     <link rel="stylesheet" href="./css/cart.css" />
     <title>Cosul tau</title>
   </head>
   <body>
     <header>
+      <div>
       <a href="main.html"><img
         id="logo-dm"
         src="./images/logodesignedmemories.jpg"
         alt="Logo Designed Memories Store"
       /></a>
-      <div id="searchbar-container">
-        <img src="./images/search.png" alt="search" />
-        <input
-          type="search"
-          id="searchbar"
-          placeholder="Cauta produsele dorite"
-        />
       </div>
       <div id="header-btn-container">
-        <a href="./account.html"
-          ><button class="header-btn">Contul meu
+        <a href="./main.html"
+          ><button class="header-btn">Prima pagina
           </button></a
         >
         <a href="./favorites.html"
           ><button class="header-btn">Favorite
           </button></a
         >
-        <a href="./cart.html"
-          ><button class="header-btn">Cosul meu
+        <a href="./contact.html"
+          ><button class="header-btn">Contact
           </button></a
         >
+        <button class="header-btn" id="logout-btn">Logout</button>
+
+        <div class="dropdown">
+          <button onclick="displayDropdownMenu()" class="dropbtn"><i class="fa fa-bars dropbtn" aria-hidden="true"></i></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="./main.html">Prima pagina</a>
+            <a href="./favorites.html">Favorite</a>
+            <a href="./contact.html">Contact</a>
+            <a href="#" onclick="handleLogout()">Logout</a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <h1>Cosul tau de cumparaturi</h1>
-
     <main>
-        <div id="cart-list"></div>
+        <div id="cart-list">
+          <h3>Nu ai niciun produs in cos momentan!</h3>
+        </div>
         <div id="payment-module">
           <h3>Detaliile cosului tau</h3>
+          <input type="text" id="voucher-input" value="Voucher"/>
+          <button id="voucher-btn">Aplica voucherul</button>
+          <span id="voucher-validation-span"></span>
+          <p>Total: <span id="total-span"></span></p>
+          
+          <div class="icon-container">
+            <p>Metode de plata acceptate</p>
+            <i class="fa fa-cc-visa fa-2x" style="color:navy;"></i>
+            <i class="fa fa-cc-mastercard fa-2x" style="color:red;"></i>
+            <i class="fa fa-cc-paypal fa-2x" style="color: blue;"></i>
+          </div>
+          <button>Plateste</button>
         </div>
     </main>
 
@@ -81,7 +99,8 @@
         </div>
       </footer>
   
-      <script src="./simple-server/index.js"></script>
+      <script src="./backend/index.js"></script>
+      <script src="./js/common-scripts.js"></script>
       <script src="./js/cart.js"></script>
     </body>
   </html>

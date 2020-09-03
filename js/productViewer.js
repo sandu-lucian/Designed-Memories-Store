@@ -2,11 +2,12 @@ let highlightImg = document.getElementById("highlight-img");
 let otherPhotos = document.getElementById("other-photos-container");
 let productInfo = document.querySelector(".info-container");
 
-let productId = window.location.search.substring(1);
+const params = new URLSearchParams(window.location.search);
+const prod = params.get("id");
 
 fetch("http://localhost:3000/api/products")
   .then((r) => r.json())
-  .then((r) => r.filter((p) => p.id == productId))
+  .then((r) => r.filter((p) => p.id == prod))
   .then((r) => renderProductDetails(r[0]));
 
 function renderProductDetails(data) {
@@ -31,7 +32,7 @@ function renderProductDetails(data) {
   let addToCartBtn = document.createElement("button");
   addToCartBtn.innerText = "Adauga in cos";
   addToCartBtn.id = "cart-btn";
-  addToCartBtn.value = productId;
+  addToCartBtn.value = prod;
   addToCartBtn.addEventListener("click", function(event) {
     fetch(`http://localhost:3000/api/products/cart/${event.target.value}`, {
       method: "POST"
