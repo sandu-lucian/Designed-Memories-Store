@@ -2,6 +2,7 @@ body {
     font-family: "Alegreya", serif;
     margin: 0px;
     width: 100%;
+    min-width: 600px;
     min-height: 100vh;
     position: relative;
     background-color: #fafafa;
@@ -27,4 +28,45 @@ body * {
 .btn-anim:active {
     transform: scale(0.9);
     transition: all 0.3s ease;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid black;
+}
+  
+.card:hover, .list:hover {
+    transform: scale(1.1);
+}
+  
+.card > img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: auto;
+}
+  
+.card > span {
+    display: none;
+}
+  
+.list {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 15px 10px;
+    border: 1px solid black;
+}
+  
+.list > img {
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
 }
