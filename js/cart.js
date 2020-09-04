@@ -20,7 +20,7 @@ function updateTotal() {
   for (let i = 0; i < items.length; i++) {
     pret += items[i].value;
   }
-  totalPrice.innerText = pret;
+  totalPrice.innerText = `${pret} RON`;
 }
 
 function renderCartList(data) {
@@ -29,7 +29,7 @@ function renderCartList(data) {
   if(data.length === 0) {
     let warning = document.createElement("h3");
     warning.innerText = "Nu ai niciun produs in cos momentan!";
-    totalPrice.innerText = pret;
+    totalPrice.innerText = `${pret} RON`;
     cartList.appendChild(warning);
 
     updateTotal();
@@ -48,10 +48,11 @@ function renderCartList(data) {
     detailsDiv.classList.add("item-details");
 
     let prodTitle = document.createElement("span");
+    prodTitle.classList.add("title-style");
     prodTitle.innerText = data[i].name;
 
     let prodPrice = document.createElement("span");
-    prodPrice.innerText = `${data[i].price} RON`;
+    prodPrice.innerText = `Pret unitate: ${data[i].price} RON`;
 
     let counter = document.createElement("input");
     counter.type = "number";
@@ -60,19 +61,18 @@ function renderCartList(data) {
     counter.min = 0;
 
     let itemTotal = document.createElement("span");
-    itemTotal.innerText = `Total: ${Math.floor(counter.value) * data[i].price}`;
+    itemTotal.innerText = `Total: ${Math.floor(counter.value) * data[i].price} RON`;
 
     counter.addEventListener("keyup", function(e) {
       let total = Math.floor(counter.value) * data[i].price;
-      itemTotal.innerText = `Total: ${total}`;
+      itemTotal.innerText = `Total: ${total} RON`;
       cartItem.value = total;
       updateTotal();
-      console.log(items);
     })
 
     let deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Sterge";
-    deleteBtn.classList.add("delete-btn");
+    deleteBtn.classList.add("delete-btn", "general-btn-alert", "btn-anim");
     deleteBtn.value = `${data[i].id}`;
 
     cartItem.appendChild(photo);
@@ -105,8 +105,10 @@ voucherBtn.addEventListener("click", function(event) {
     if(r) {
       pret *= 0.9;
       voucherValidation.innerText = "Voucherul a fost aplicat!";
+      voucherValidation.classList.remove("invisible");
       totalPrice.innerText = `${pret.toFixed(2)} RON`;
     } else {
+      voucherValidation.classList.remove("invisible");
       voucherValidation.innerText = "Voucherul nu este valid!";
     }
   });

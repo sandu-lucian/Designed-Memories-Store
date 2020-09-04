@@ -9,7 +9,7 @@ let products = [
     id: chance.guid(),
     name: "Tablou Rose",
     price: 65,
-    description: chance.paragraph({ sentences: 10 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/99159234_163454725143945_7898450080024231936_o.jpg?_nc_cat=104&_nc_sid=a26aad&_nc_ohc=G4RqwynRhzcAX_E2pS3&_nc_ht=scontent.fias1-1.fna&oh=26b85a1e405e670cf8c24b49e121cf92&oe=5F528FD9",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/99044346_163454688477282_1535481500156297216_o.jpg?_nc_cat=110&_nc_sid=a26aad&_nc_ohc=gONZev3jcoIAX9HFpvv&_nc_ht=scontent.fias1-1.fna&oh=ef4c84be8f99a0a2323f047f8d37b994&oe=5F611E27",
@@ -23,7 +23,7 @@ let products = [
     id: chance.guid(),
     name: "Plicuri embosate",
     price: 15,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83904351_132674244888660_1561256659756515328_o.jpg?_nc_cat=103&_nc_sid=a26aad&_nc_ohc=W0WzW7SvlX4AX-bT10N&_nc_ht=scontent.fias1-1.fna&oh=03acd8fb66e0333b5fce4ac3850ff001&oe=5F538EB4",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/84523632_132674278221990_7197757269834989568_o.jpg?_nc_cat=111&_nc_sid=a26aad&_nc_ohc=adYHgJEpe-UAX-1yL9d&_nc_ht=scontent.fias1-1.fna&oh=ca7e6cf1445bc7539d3fb796b0f2757b&oe=5F645F89",
@@ -37,7 +37,7 @@ let products = [
     id: chance.guid(),
     name: "Umerase personalizate",
     price: 40,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83692961_168515407971210_6729412976247034526_o.jpg?_nc_cat=105&_nc_sid=a26aad&_nc_ohc=R-Gh4L8VdnIAX8b3uLE&_nc_ht=scontent.fias1-1.fna&oh=d15ebe01dc237b86fbd99e4329a600e6&oe=5F5436F6",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83330098_168515437971207_4878338323027890042_o.jpg?_nc_cat=108&_nc_sid=a26aad&_nc_ohc=Uqr7XOHqj1AAX-QczoP&_nc_ht=scontent.fias1-1.fna&oh=c141bd187b05e61a772b6da8f565ec2d&oe=5F637BF1",
@@ -52,7 +52,7 @@ let products = [
     id: chance.guid(),
     name: "Plicuri cu dantela",
     price: 10,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/106453566_171718840984200_2929993024744567561_o.jpg?_nc_cat=108&_nc_sid=a26aad&_nc_ohc=oTwZ4jDE2EYAX9ll1ND&_nc_ht=scontent.fias1-1.fna&oh=29ef340aae80d5fb6146f8289b2d6a72&oe=5F5695C8",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/105603544_171718867650864_6295775558505810609_o.jpg?_nc_cat=104&_nc_sid=a26aad&_nc_ohc=lDbu-m0t-6YAX-cLqDK&_nc_ht=scontent.fias1-1.fna&oh=febfd03b79ec8508f4cb468bd0f3b354&oe=5F66094A",
@@ -67,7 +67,7 @@ let products = [
     id: chance.guid(),
     name: "Invitatie Elefantel Baiat",
     price: 15,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/91402586_149578489864902_1500620650774003712_o.jpg?_nc_cat=111&_nc_sid=9267fe&_nc_ohc=5KSxzqgGxbMAX9-sipD&_nc_ht=scontent.fias1-1.fna&oh=3240128fa863fb1b0c3b0d48c7471042&oe=5F566F65",
     ],
@@ -79,7 +79,7 @@ let products = [
     id: chance.guid(),
     name: "Invitatie Elefantel Fetita",
     price: 15,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/91597624_149001146589303_4489606361927122944_o.jpg?_nc_cat=109&_nc_sid=9267fe&_nc_ohc=8zotptCYCW4AX_wkkpD&_nc_oc=AQlvk1MhPDoG--u0cv5_-OtqCnalhmX2mfBHeagAPIFspdTFPKiI65atUvRS1C-EtIMYfVnxzswH3b8xdc6JolBg&_nc_ht=scontent.fias1-1.fna&oh=a7a217851e321df94014745c30b33d74&oe=5F554BFB",
     ],
@@ -91,7 +91,7 @@ let products = [
     id: chance.guid(),
     name: "Invitatie Botez Gemeni",
     price: 18,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/91239145_147738720048879_633448654719418368_o.jpg?_nc_cat=110&_nc_sid=9267fe&_nc_ohc=5qBav9wNKMQAX-wlgQ7&_nc_ht=scontent.fias1-1.fna&oh=d107d50453bf342dfd28bc747066bb96&oe=5F55FCDD",
     ],
@@ -103,7 +103,7 @@ let products = [
     id: chance.guid(),
     name: "Invitatie Caprioara Fetita",
     price: 17,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/91117548_147424186746999_2279408971565498368_o.jpg?_nc_cat=104&_nc_sid=a26aad&_nc_ohc=0xhdMglf0VgAX9nHBNA&_nc_ht=scontent.fias1-1.fna&oh=bb4184112a6bdafaae107dc044ffa90e&oe=5F541BFD",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/90819832_147424156747002_2268639916596396032_o.jpg?_nc_cat=102&_nc_sid=a26aad&_nc_ohc=j62EMNfqVhMAX-KyqU8&_nc_ht=scontent.fias1-1.fna&oh=59411ddfe12263968e3e93915b3f95ec&oe=5F654C39",
@@ -116,7 +116,7 @@ let products = [
     id: chance.guid(),
     name: "Invitatie Caprioara Baietel",
     price: 16,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/90883793_147424260080325_8137671748297424896_o.jpg?_nc_cat=110&_nc_sid=a26aad&_nc_ohc=kNO4Nf88VmsAX-PsDjZ&_nc_ht=scontent.fias1-1.fna&oh=39a9e55d04f9d16080f4c92455750287&oe=5F56D3A2",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/91018863_147424230080328_2287538661757026304_o.jpg?_nc_cat=108&_nc_sid=a26aad&_nc_ohc=e1wG9vTGX9MAX-SXsg2&_nc_ht=scontent.fias1-1.fna&oh=53ba6154ef07f3b19d495e412aa5fb5a&oe=5F659651",
@@ -129,7 +129,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Green Love",
     price: 29,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83363455_129449018544516_6241379404337905664_n.jpg?_nc_cat=110&_nc_sid=0debeb&_nc_ohc=CsHSsMxZbKMAX9-0_A0&_nc_ht=scontent.fias1-1.fna&oh=ad336e870c58f7cae64b48287b98f6d5&oe=5F567210",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82672765_129449025211182_4898306636541591552_n.jpg?_nc_cat=108&_nc_sid=0debeb&_nc_ohc=NZylVG2QyLEAX8LWDR7&_nc_ht=scontent.fias1-1.fna&oh=ea73c03de45b12548c7bbc896a2056cb&oe=5F64297A",
@@ -149,7 +149,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Free Spirit",
     price: 20,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83888324_129448308544587_5356609278004166656_n.jpg?_nc_cat=105&_nc_sid=0debeb&_nc_ohc=TLRijxFFsN4AX_ZjxTo&_nc_ht=scontent.fias1-1.fna&oh=813726b04535ee5c21765c61f76bd32d&oe=5F55B126",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82751020_129448305211254_1485329068256657408_n.jpg?_nc_cat=107&_nc_sid=0debeb&_nc_ohc=qOdC0d-nincAX9mwx-4&_nc_ht=scontent.fias1-1.fna&oh=e54f3f1d245a3941e14026d6b2d4ee85&oe=5F654AE6",
@@ -169,7 +169,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Bohemian",
     price: 22,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83728071_129447398544678_3963665282701983744_n.jpg?_nc_cat=111&_nc_sid=0debeb&_nc_ohc=DJCQumhH2W0AX__mzrp&_nc_ht=scontent.fias1-1.fna&oh=45abf6990876dd207d907f7a4425d700&oe=5F556C63",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83630993_129447401878011_1735054727592280064_n.jpg?_nc_cat=111&_nc_sid=0debeb&_nc_ohc=Y-pj8IdGlVAAX_SzRR2&_nc_ht=scontent.fias1-1.fna&oh=61887969383fed3ce3af8dfc0a3608cd&oe=5F631D24",
@@ -189,7 +189,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Blanche",
     price: 26,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83353671_129445081878243_7865732874589175808_n.jpg?_nc_cat=102&_nc_sid=0debeb&_nc_ohc=yg2FGhum3K4AX_zFF0I&_nc_ht=scontent.fias1-1.fna&oh=6cbf3c71b922e89690dae5f99d3793bd&oe=5F5721F9",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83204277_129445085211576_1449284560247324672_n.jpg?_nc_cat=110&_nc_sid=0debeb&_nc_ohc=kr-AmyBOazMAX86DAi6&_nc_ht=scontent.fias1-1.fna&oh=d727069dec2ce8b844976b3be64ff64f&oe=5F62DC17",
@@ -209,7 +209,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Elegance",
     price: 28,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82791314_129444191878332_3679233508770840576_n.jpg?_nc_cat=106&_nc_sid=0debeb&_nc_ohc=cbqyoWeWO3gAX9hmQGo&_nc_ht=scontent.fias1-1.fna&oh=7851ab0ea2ab56212f81a594662d9ef2&oe=5F561827",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83725063_129444198544998_7299851378355077120_n.jpg?_nc_cat=106&_nc_sid=0debeb&_nc_ohc=l0tBRTfKNC8AX_sbsLR&_nc_ht=scontent.fias1-1.fna&oh=35a70a9293b61ad6ca9a59fb5f475cb1&oe=5F65C2AB",
@@ -229,7 +229,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Rustic",
     price: 19,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82914906_129443105211774_8705891755439947776_n.jpg?_nc_cat=101&_nc_sid=0debeb&_nc_ohc=bIEqS34yLFoAX9JPWZJ&_nc_ht=scontent.fias1-1.fna&oh=a376016d380fd15e9ca2b8f7eccea996&oe=5F53C05B",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82898613_129443111878440_2085316156758949888_n.jpg?_nc_cat=110&_nc_sid=0debeb&_nc_ohc=IMNVHOOIY18AX_Fmvlz&_nc_ht=scontent.fias1-1.fna&oh=97b7d0f5f1cda761f9fde237ff08657b&oe=5F62CDEE",
@@ -249,7 +249,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Coloured Dreams",
     price: 20,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82900595_129441918545226_7049163680704888832_n.jpg?_nc_cat=100&_nc_sid=0debeb&_nc_ohc=Dm2fvWSUKUkAX8Q2gNd&_nc_ht=scontent.fias1-1.fna&oh=b1b2643818215ced67f3413e5a6c5492&oe=5F564740",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82876448_129441921878559_2175778278365724672_n.jpg?_nc_cat=106&_nc_sid=0debeb&_nc_ohc=QLI7Xd_8jkkAX8lyZ2h&_nc_ht=scontent.fias1-1.fna&oh=3041a99039f1788381cd8b3701b707d9&oe=5F649709",
@@ -269,7 +269,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Peony",
     price: 21,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/84106299_129439818545436_5908793419156684800_n.jpg?_nc_cat=101&_nc_sid=0debeb&_nc_ohc=qaHGCMWgfngAX-ieGQU&_nc_ht=scontent.fias1-1.fna&oh=0742902375ddaa91bc11b219f0ac3bf7&oe=5F5446CF",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82786358_129439821878769_4788922675735035904_n.jpg?_nc_cat=111&_nc_sid=0debeb&_nc_ohc=y_4AooHjRygAX8QVYeY&_nc_ht=scontent.fias1-1.fna&oh=647a14c7655f06fff4240611c2e4c546&oe=5F628C09",
@@ -289,7 +289,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Delicate Roses",
     price: 24,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/82862321_129436681879083_1797299133107666944_n.jpg?_nc_cat=110&_nc_sid=0debeb&_nc_ohc=Q9Mz28SoxbAAX-nbszu&_nc_ht=scontent.fias1-1.fna&oh=7ed27b112866a4c048ec0c68fc8e7659&oe=5F5564AB",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83954301_129436688545749_4723589690517618688_n.jpg?_nc_cat=100&_nc_sid=0debeb&_nc_ohc=if_jyu2I-O0AX-9DIP2&_nc_ht=scontent.fias1-1.fna&oh=f659001858d4acf5170e13b4730fb041&oe=5F64B2D1",
@@ -309,7 +309,7 @@ let products = [
     id: chance.guid(),
     name: "Set Nunta Magnolia",
     price: 20,
-    description: chance.paragraph({ sentences: 6 }),
+    description: chance.paragraph({ sentences: 3 }),
     img: [
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/84217161_129431448546273_3984963248133767168_n.jpg?_nc_cat=108&_nc_sid=0debeb&_nc_ohc=76k_s6j1mO8AX-DFE6H&_nc_ht=scontent.fias1-1.fna&oh=2c886c08bb5f4cdf20269eb390fe1bf4&oe=5F5569C7",
       "https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/83322034_129431441879607_2249019037109452800_n.jpg?_nc_cat=106&_nc_sid=0debeb&_nc_ohc=OGZ6PHVhWcYAX-dT83t&_nc_ht=scontent.fias1-1.fna&oh=777a22ec4c95a40261d8c61553a159db&oe=5F644731",

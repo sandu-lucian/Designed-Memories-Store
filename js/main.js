@@ -45,19 +45,24 @@ function renderProductsList(data, type) {
 
     let nameDiv = document.createElement("div");
     nameDiv.innerText = `${data[i].name}`;
+    nameDiv.classList.add("title-style");
 
     let descriptionSpan = document.createElement("span");
     descriptionSpan.innerText = `${data[i].description}`;
 
     let priceDiv = document.createElement("div");
-    priceDiv.innerText = `Price: ${data[i].price}`;
+    priceDiv.innerText = `Pret:\n${data[i].price} RON`;
+
+    let btnDiv = document.createElement("div");
+    btnDiv.classList.add("card-btns");
 
     let favBtn = document.createElement("i");
-    favBtn.classList.add("fa", "fa-heart-o", "fa-2x");
+    favBtn.classList.add("fa", "fa-heart-o", "fa-2x", "heart-style");
     favBtn.value = `${data[i].id}`;
 
     let addToCartBtn = document.createElement("button");
     addToCartBtn.innerText = "Adauga in cos";
+    addToCartBtn.classList.add("btn-anim", "general-btn");
     addToCartBtn.name = "cartBtn";
     addToCartBtn.value = `${data[i].id}`;
 
@@ -65,8 +70,9 @@ function renderProductsList(data, type) {
     productDiv.appendChild(nameDiv);
     productDiv.appendChild(descriptionSpan);
     productDiv.appendChild(priceDiv);
-    productDiv.appendChild(favBtn);
-    productDiv.appendChild(addToCartBtn);
+    btnDiv.appendChild(favBtn);
+    btnDiv.appendChild(addToCartBtn);
+    productDiv.appendChild(btnDiv);
     productsList.appendChild(productDiv);
   }
 }
@@ -165,14 +171,12 @@ productsList.addEventListener("click", function (event) {
   if(event.target.classList.contains("fa-heart-o")) {
     event.target.classList.remove("fa-heart-o");
     event.target.classList.add("fa-heart");
-    event.target.setAttribute("style", "color: red");
     fetch(`http://localhost:3000/api/products/favorites/${selectedObj[0].id}`, {
       method: "POST"
     })
   } else if (event.target.classList.contains("fa-heart")) {
     event.target.classList.remove("fa-heart");
     event.target.classList.add("fa-heart-o");
-    event.target.setAttribute("style", "color: black");
     fetch(`http://localhost:3000/api/products/favorites/${selectedObj[0].id}`, {
       method: "DELETE"
     })

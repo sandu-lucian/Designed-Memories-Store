@@ -7,38 +7,39 @@
       href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./css/header-nav-footer.css" />
     <link rel="stylesheet" href="./css/common-styles.css" />
     <link rel="stylesheet" href="./css/contact.css" />
-    <title>Document</title>
+    <title>Contact</title>
   </head>
   <body>
     <header>
       <div>
-      <a href="main.html"><img
-        id="logo-dm"
-        src="./images/logodesignedmemories.jpg"
-        alt="Logo Designed Memories Store"
-      /></a>
+        <a href="main.html"
+          ><img
+            id="logo-dm"
+            src="./images/logodesignedmemories.jpg"
+            alt="Logo Designed Memories Store"
+        /></a>
       </div>
       <div id="header-btn-container">
         <a href="./main.html"
-          ><button class="header-btn">Prima pagina
-          </button></a
+          ><button class="header-btn">Prima pagina</button></a
         >
         <a href="./favorites.html"
-          ><button class="header-btn">Favorite
-          </button></a
+          ><button class="header-btn">Favorite</button></a
         >
-        <a href="./cart.html"
-          ><button class="header-btn">Cosul meu
-          </button></a
-        >
+        <a href="./cart.html"><button class="header-btn">Cosul meu</button></a>
         <button class="header-btn" id="logout-btn">Logout</button>
 
         <div class="dropdown">
-          <button onclick="displayDropdownMenu()" class="dropbtn"><i class="fa fa-bars dropbtn" aria-hidden="true"></i></button>
+          <button onclick="displayDropdownMenu()" class="dropbtn">
+            <i class="fa fa-bars dropbtn" aria-hidden="true"></i>
+          </button>
           <div id="myDropdown" class="dropdown-content">
             <a href="./main.html">Prima pagina</a>
             <a href="./favorites.html">Favorite</a>
@@ -49,34 +50,39 @@
       </div>
     </header>
 
-    <nav>
-    </nav>
+    <nav></nav>
 
     <div class="main">
       <div class="form-div">
-    <form>
-      <input type="text" placeholder="Numele tau" />
-      <input type="email" placeholder="Adresa ta email" />
-      <textarea cols="30" rows="10" placeholder="Mesajul tau" id="contact-textarea"></textarea>
-      <button>Trimite</button>
-    </form>
+        <form>
+          <h2>Contacteaza-ne aici!</h2>
+          <input type="text" placeholder="Numele tau" />
+          <input type="email" placeholder="Adresa ta email" />
+          <textarea
+            cols="30"
+            rows="10"
+            placeholder="Scrie-ne aici tot ce ai vrea sa discutam"
+            id="contact-textarea"
+          ></textarea>
+          <button class="btn-anim general-btn">Trimite</button>
+        </form>
       </div>
-    <div class="info">
-      <div class="info-div">
-      <div>
-      <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-      <span>Strada Colonel Langa 17, Iasi, Romania</span>
+      <div class="info">
+        <div class="info-div">
+          <div>
+            <i class="fa fa-map-marker fa-2x" aria-hidden="true" style="color: #283349;"></i>
+            <span>Strada Colonel Langa 17, Iasi, Romania</span>
+          </div>
+          <div>
+            <i class="fa fa-mobile fa-3x" aria-hidden="true" style="color: #283349;"></i>
+            <span>0743 000 123</span>
+          </div>
+          <div>
+            <i class="fa fa-envelope fa-2x" aria-hidden="true" style="color: #283349;"></i>
+            <span>designedmemoriesstore@gmail.com</span>
+          </div>
+        </div>
       </div>
-      <div>
-      <i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
-      <span>0743 000 123</span>
-      </div>
-      <div>
-      <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-      <span>designedmemoriesstore@gmail.com</span>
-      </div>
-      </div>
-    </div>
     </div>
 
     <footer class="footer">
@@ -89,7 +95,11 @@
       <div class="right-side">
         <ul>
           <li>
-            <a class="facebook" href="https://www.facebook.com/designedmemoriesstore" target="_blank">
+            <a
+              class="facebook"
+              href="https://www.facebook.com/designedmemoriesstore"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -98,7 +108,11 @@
             </a>
           </li>
           <li>
-            <a class="instagram" href="https://www.instagram.com/designedmemoriesstore/" target="_blank">
+            <a
+              class="instagram"
+              href="https://www.instagram.com/designedmemoriesstore/"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -118,8 +132,8 @@
         </ul>
       </div>
     </footer>
-  
-      <script src="./backend/index.js"></script>
-      <script src="./js/common-scripts.js"></script>
-    </body>
-  </html>
+
+    <script src="./backend/index.js"></script>
+    <script src="./js/common-scripts.js"></script>
+  </body>
+</html>

@@ -1,22 +1,32 @@
 .main {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "form info";
+    justify-items: center;
     align-items: center;
-    padding-bottom: 70px;
+    padding: 30px 30px 100px;
+}
+
+.main * {
+    font-size: 18px;
 }
 
 .form-div {
-    width: 50%;
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: form;
 }
 
 form {
-    width: 60%;
-    height: 70%;
+    width: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -25,19 +35,23 @@ form > * {
     margin: 5px 0px;
 }
 
+form > h2 {
+    text-align: center;
+}
+
 #contact-textarea {
     resize: none;
 }
 
 .info {
-    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
+    grid-area: info;
 }
 
 .info-div {
-    width: 80%;
+    width: auto;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -46,11 +60,11 @@ form > * {
 }
 
 .info-div > div {
-    width: 400px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
-i {
-    margin: 0px 20px;
+.info-div i {
+    margin: 10px 30px;
 }

@@ -31,6 +31,7 @@ function renderProductDetails(data) {
 
   let addToCartBtn = document.createElement("button");
   addToCartBtn.innerText = "Adauga in cos";
+  addToCartBtn.classList.add("general-btn", "btn-anim");
   addToCartBtn.id = "cart-btn";
   addToCartBtn.value = prod;
   addToCartBtn.addEventListener("click", function(event) {
