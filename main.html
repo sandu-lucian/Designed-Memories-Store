@@ -19,14 +19,15 @@
   <body>
     <header>
       <div>
-      <a href="main.html"><img
-        id="logo-dm"
-        src="./images/logodesignedmemories.jpg"
-        alt="Logo Designed Memories Store"
-      /></a>
+        <a href="main.html"
+          ><img
+            id="logo-dm"
+            src="./images/logodesignedmemories.jpg"
+            alt="Logo Designed Memories Store"
+        /></a>
       </div>
       <div id="searchbar-container">
-        <img src="./images/search.png" alt="search" id="mag-glass"/>
+        <img src="./images/search.png" alt="search" id="mag-glass" />
         <input
           type="search"
           id="searchbar"
@@ -35,21 +36,18 @@
       </div>
       <div id="header-btn-container">
         <a href="./favorites.html"
-          ><button class="header-btn">Favorite
-          </button></a
+          ><button class="header-btn">Favorite</button></a
         >
-        <a href="./cart.html"
-          ><button class="header-btn">Cosul meu
-          </button></a
-        >
-        <a href="./contact.html"
-          ><button class="header-btn">Contact
-          </button></a
-        >
-        <button class="header-btn" id="logout-btn">Logout</button>
+        <a href="./cart.html"><button class="header-btn">Cosul meu</button></a>
+        <a href="./contact.html"><button class="header-btn">Contact</button></a>
+        <button class="header-btn" id="logout-btn" onclick="handleLogout()">
+          Logout
+        </button>
 
         <div class="dropdown">
-          <button onclick="displayDropdownMenu()" class="dropbtn"><i class="fa fa-bars dropbtn" aria-hidden="true"></i></button>
+          <button onclick="displayDropdownMenu()" class="dropbtn">
+            <i class="fa fa-bars dropbtn" aria-hidden="true"></i>
+          </button>
           <div id="myDropdown" class="dropdown-content">
             <a href="./favorites.html">Favorite</a>
             <a href="./cart.html">Cosul meu</a>
@@ -60,36 +58,39 @@
       </div>
     </header>
 
-    <nav>
-    </nav>
+    <nav></nav>
 
     <div class="main">
       <div id="filters">
         <div id="display-type">
-        <span>Mod de aranjare</span>
-        <button id="card-btn" class="btn-anim"><i class="fa fa-th" aria-hidden="true"></i></button>
-        <button id="list-btn" class="btn-anim"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+          <span>Mod de aranjare</span>
+          <button id="card-btn" class="btn-anim">
+            <i class="fa fa-th" aria-hidden="true"></i>
+          </button>
+          <button id="list-btn" class="btn-anim">
+            <i class="fa fa-list-ul" aria-hidden="true"></i>
+          </button>
         </div>
         <span>Tip produs</span>
         <div id="type">
           <div>
-            <input type="checkbox" value="invitatie-nunta" id="inv-nunta"/>
+            <input type="checkbox" value="invitatie-nunta" id="inv-nunta" />
             <label for="inv-nunta">Invitatii nunta</label>
           </div>
           <div>
-            <input type="checkbox" value="invitatie-botez" id="inv-botez"/>
+            <input type="checkbox" value="invitatie-botez" id="inv-botez" />
             <label for="inv-botez">Invitatii botez</label>
           </div>
           <div>
-            <input type="checkbox" value="tablou" id="tablouri"/>
+            <input type="checkbox" value="tablou" id="tablouri" />
             <label for="tablouri">Tablouri personalizate</label>
           </div>
           <div>
-            <input type="checkbox" value="plic" id="plic-filter"/>
+            <input type="checkbox" value="plic" id="plic-filter" />
             <label for="plic-filter">Plicuri</label>
           </div>
           <div>
-            <input type="checkbox" value="umerase" id="umerase"/>
+            <input type="checkbox" value="umerase" id="umerase" />
             <label for="umerase">Umerase personalizate</label>
           </div>
         </div>
@@ -116,7 +117,11 @@
       <div class="right-side">
         <ul>
           <li>
-            <a class="facebook" href="https://www.facebook.com/designedmemoriesstore" target="_blank">
+            <a
+              class="facebook"
+              href="https://www.facebook.com/designedmemoriesstore"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -125,7 +130,11 @@
             </a>
           </li>
           <li>
-            <a class="instagram" href="https://www.instagram.com/designedmemoriesstore/" target="_blank">
+            <a
+              class="instagram"
+              href="https://www.instagram.com/designedmemoriesstore/"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>

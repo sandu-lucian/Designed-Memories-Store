@@ -34,11 +34,11 @@ function renderProductDetails(data) {
   addToCartBtn.classList.add("general-btn", "btn-anim");
   addToCartBtn.id = "cart-btn";
   addToCartBtn.value = prod;
-  addToCartBtn.addEventListener("click", function(event) {
+  addToCartBtn.addEventListener("click", function (event) {
     fetch(`http://localhost:3000/api/products/cart/${event.target.value}`, {
-      method: "POST"
-    })
-  })
+      method: "POST",
+    });
+  });
 
   productInfo.appendChild(prodTitle);
   productInfo.appendChild(prodPrice);

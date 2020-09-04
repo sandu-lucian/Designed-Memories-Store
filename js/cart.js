@@ -10,10 +10,10 @@ let pret = 0;
 fetch("http://localhost:3000/api/products/cart")
   .then((r) => r.json())
   .then((r) => {
-      renderCartList(r);;
-      updateTotal();
-      console.log(r)
-    });
+    renderCartList(r);
+    updateTotal();
+    console.log(r);
+  });
 
 function updateTotal() {
   pret = 0;
@@ -26,7 +26,7 @@ function updateTotal() {
 function renderCartList(data) {
   cartList.innerHTML = "";
 
-  if(data.length === 0) {
+  if (data.length === 0) {
     let warning = document.createElement("h3");
     warning.innerText = "Nu ai niciun produs in cos momentan!";
     totalPrice.innerText = `${pret} RON`;
@@ -61,14 +61,16 @@ function renderCartList(data) {
     counter.min = 0;
 
     let itemTotal = document.createElement("span");
-    itemTotal.innerText = `Total: ${Math.floor(counter.value) * data[i].price} RON`;
+    itemTotal.innerText = `Total: ${
+      Math.floor(counter.value) * data[i].price
+    } RON`;
 
-    counter.addEventListener("keyup", function(e) {
+    counter.addEventListener("keyup", function (e) {
       let total = Math.floor(counter.value) * data[i].price;
       itemTotal.innerText = `Total: ${total} RON`;
       cartItem.value = total;
       updateTotal();
-    })
+    });
 
     let deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Sterge";
@@ -80,36 +82,42 @@ function renderCartList(data) {
     detailsDiv.appendChild(prodTitle);
     detailsDiv.appendChild(prodPrice);
     detailsDiv.appendChild(counter);
-    cartItem.appendChild(itemTotal)
+    cartItem.appendChild(itemTotal);
     cartItem.appendChild(deleteBtn);
     cartList.appendChild(cartItem);
   }
 }
 
-cartList.addEventListener("click", function(event) {
-  if(event.target.classList.contains("delete-btn")) {
+cartList.addEventListener("click", function (event) {
+  if (event.target.classList.contains("delete-btn")) {
     fetch(`http://localhost:3000/api/products/cart/${event.target.value}`, {
-      method: "DELETE"
-    }).then(r => r.json()).then(r => {
-      renderCartList(r, "list");
-      updateTotal();
+      method: "DELETE",
     })
+      .then((r) => r.json())
+      .then((r) => {
+        renderCartList(r, "list");
+        updateTotal();
+      });
   }
-})
+});
 
-voucherBtn.addEventListener("click", function(event) {
-  fetch(`http://localhost:3000/api/products/cart/voucher/${voucherInput.value}`, {
-    method: "POST"
-  })
-  .then(r => r.json()).then(r => {
-    if(r) {
-      pret *= 0.9;
-      voucherValidation.innerText = "Voucherul a fost aplicat!";
-      voucherValidation.classList.remove("invisible");
-      totalPrice.innerText = `${pret.toFixed(2)} RON`;
-    } else {
-      voucherValidation.classList.remove("invisible");
-      voucherValidation.innerText = "Voucherul nu este valid!";
+voucherBtn.addEventListener("click", function (event) {
+  fetch(
+    `http://localhost:3000/api/products/cart/voucher/${voucherInput.value}`,
+    {
+      method: "POST",
     }
-  });
-})
+  )
+    .then((r) => r.json())
+    .then((r) => {
+      if (r) {
+        pret *= 0.9;
+        voucherValidation.innerText = "Voucherul a fost aplicat!";
+        voucherValidation.classList.remove("invisible");
+        totalPrice.innerText = `${pret.toFixed(2)} RON`;
+      } else {
+        voucherValidation.classList.remove("invisible");
+        voucherValidation.innerText = "Voucherul nu este valid!";
+      }
+    });
+});

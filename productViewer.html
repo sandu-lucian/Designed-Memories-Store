@@ -19,29 +19,27 @@
   <body>
     <header>
       <div>
-      <a href="main.html"><img
-        id="logo-dm"
-        src="./images/logodesignedmemories.jpg"
-        alt="Logo Designed Memories Store"
-      /></a>
+        <a href="main.html"
+          ><img
+            id="logo-dm"
+            src="./images/logodesignedmemories.jpg"
+            alt="Logo Designed Memories Store"
+        /></a>
       </div>
       <div id="header-btn-container">
         <a href="./favorites.html"
-          ><button class="header-btn">Favorite
-          </button></a
+          ><button class="header-btn">Favorite</button></a
         >
-        <a href="./cart.html"
-          ><button class="header-btn">Cosul meu
-          </button></a
-        >
-        <a href="./contact.html"
-          ><button class="header-btn">Contact
-          </button></a
-        >
-        <button class="header-btn" id="logout-btn">Logout</button>
+        <a href="./cart.html"><button class="header-btn">Cosul meu</button></a>
+        <a href="./contact.html"><button class="header-btn">Contact</button></a>
+        <button class="header-btn" id="logout-btn" onclick="handleLogout()">
+          Logout
+        </button>
 
         <div class="dropdown">
-          <button onclick="displayDropdownMenu()" class="dropbtn"><i class="fa fa-bars dropbtn" aria-hidden="true"></i></button>
+          <button onclick="displayDropdownMenu()" class="dropbtn">
+            <i class="fa fa-bars dropbtn" aria-hidden="true"></i>
+          </button>
           <div id="myDropdown" class="dropdown-content">
             <a href="./favorites.html">Favorite</a>
             <a href="./cart.html">Cosul meu</a>
@@ -52,8 +50,7 @@
       </div>
     </header>
 
-    <nav>
-    </nav>
+    <nav></nav>
 
     <main>
       <div class="photos-container">
@@ -75,7 +72,11 @@
       <div class="right-side">
         <ul>
           <li>
-            <a class="facebook" href="https://www.facebook.com/designedmemoriesstore" target="_blank">
+            <a
+              class="facebook"
+              href="https://www.facebook.com/designedmemoriesstore"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -84,7 +85,11 @@
             </a>
           </li>
           <li>
-            <a class="instagram" href="https://www.instagram.com/designedmemoriesstore/" target="_blank">
+            <a
+              class="instagram"
+              href="https://www.instagram.com/designedmemoriesstore/"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -104,9 +109,9 @@
         </ul>
       </div>
     </footer>
-  
-      <script src="./backend/index.js"></script>
-      <script src="./js/common-scripts.js"></script>
-      <script src="./js/productViewer.js"></script>
-    </body>
-  </html>
+
+    <script src="./backend/index.js"></script>
+    <script src="./js/common-scripts.js"></script>
+    <script src="./js/productViewer.js"></script>
+  </body>
+</html>

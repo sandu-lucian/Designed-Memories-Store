@@ -34,7 +34,9 @@
           ><button class="header-btn">Favorite</button></a
         >
         <a href="./cart.html"><button class="header-btn">Cosul meu</button></a>
-        <button class="header-btn" id="logout-btn">Logout</button>
+        <button class="header-btn" id="logout-btn" onclick="handleLogout()">
+          Logout
+        </button>
 
         <div class="dropdown">
           <button onclick="displayDropdownMenu()" class="dropbtn">
@@ -52,38 +54,47 @@
 
     <nav></nav>
 
-    <div class="main">
-      <div class="form-div">
-        <form>
-          <h2>Contacteaza-ne aici!</h2>
-          <input type="text" placeholder="Numele tau" />
-          <input type="email" placeholder="Adresa ta email" />
-          <textarea
-            cols="30"
-            rows="10"
-            placeholder="Scrie-ne aici tot ce ai vrea sa discutam"
-            id="contact-textarea"
-          ></textarea>
-          <button class="btn-anim general-btn">Trimite</button>
-        </form>
-      </div>
-      <div class="info">
-        <div class="info-div">
-          <div>
-            <i class="fa fa-map-marker fa-2x" aria-hidden="true" style="color: #283349;"></i>
-            <span>Strada Colonel Langa 17, Iasi, Romania</span>
-          </div>
-          <div>
-            <i class="fa fa-mobile fa-3x" aria-hidden="true" style="color: #283349;"></i>
-            <span>0743 000 123</span>
-          </div>
-          <div>
-            <i class="fa fa-envelope fa-2x" aria-hidden="true" style="color: #283349;"></i>
-            <span>designedmemoriesstore@gmail.com</span>
-          </div>
+    <main>
+      <form>
+        <h2>Contacteaza-ne aici!</h2>
+        <input type="text" placeholder="Numele tau" />
+        <input type="email" placeholder="Adresa ta email" />
+        <textarea
+          cols="30"
+          rows="10"
+          placeholder="Scrie-ne aici tot ce ai vrea sa discutam"
+          id="contact-textarea"
+        ></textarea>
+        <button class="btn-anim general-btn">Trimite</button>
+      </form>
+
+      <div class="info-div">
+        <div>
+          <i
+            class="fa fa-map-marker fa-2x"
+            aria-hidden="true"
+            style="color: #283349"
+          ></i>
+          <span>Strada Colonel Langa 17, Iasi, Romania</span>
+        </div>
+        <div>
+          <i
+            class="fa fa-mobile fa-3x"
+            aria-hidden="true"
+            style="color: #283349"
+          ></i>
+          <span>0743 000 123</span>
+        </div>
+        <div>
+          <i
+            class="fa fa-envelope fa-2x"
+            aria-hidden="true"
+            style="color: #283349"
+          ></i>
+          <span>designedmemoriesstore@gmail.com</span>
         </div>
       </div>
-    </div>
+    </main>
 
     <footer class="footer">
       <div class="left-side">

@@ -19,29 +19,29 @@
   <body>
     <header>
       <div>
-      <a href="main.html"><img
-        id="logo-dm"
-        src="./images/logodesignedmemories.jpg"
-        alt="Logo Designed Memories Store"
-      /></a>
+        <a href="main.html"
+          ><img
+            id="logo-dm"
+            src="./images/logodesignedmemories.jpg"
+            alt="Logo Designed Memories Store"
+        /></a>
       </div>
       <div id="header-btn-container">
         <a href="./main.html"
-          ><button class="header-btn">Prima pagina
-          </button></a
+          ><button class="header-btn">Prima pagina</button></a
         >
         <a href="./favorites.html"
-          ><button class="header-btn">Favorite
-          </button></a
+          ><button class="header-btn">Favorite</button></a
         >
-        <a href="./contact.html"
-          ><button class="header-btn">Contact
-          </button></a
-        >
-        <button class="header-btn" id="logout-btn">Logout</button>
+        <a href="./contact.html"><button class="header-btn">Contact</button></a>
+        <button class="header-btn" id="logout-btn" onclick="handleLogout()">
+          Logout
+        </button>
 
         <div class="dropdown">
-          <button onclick="displayDropdownMenu()" class="dropbtn"><i class="fa fa-bars dropbtn" aria-hidden="true"></i></button>
+          <button onclick="displayDropdownMenu()" class="dropbtn">
+            <i class="fa fa-bars dropbtn" aria-hidden="true"></i>
+          </button>
           <div id="myDropdown" class="dropdown-content">
             <a href="./main.html">Prima pagina</a>
             <a href="./favorites.html">Favorite</a>
@@ -53,27 +53,26 @@
     </header>
 
     <main>
-        <div id="cart-list">
-          <h3>Nu ai niciun produs in cos momentan!</h3>
+      <div id="cart-list">
+        <h3>Nu ai niciun produs in cos momentan!</h3>
+      </div>
+      <div id="payment-module">
+        <h3>Detaliile cosului tau</h3>
+        <input type="text" id="voucher-input" value="Voucher" />
+        <button id="voucher-btn" class="btn-anim general-btn">
+          Aplica voucherul
+        </button>
+        <span id="voucher-validation-span" class="invisible">X</span>
+        <p>Total: <span id="total-span"></span></p>
+        <p>Metode de plata acceptate</p>
+        <div class="icon-container">
+          <i class="fa fa-cc-visa fa-2x" style="color: navy"></i>
+          <i class="fa fa-cc-mastercard fa-2x" style="color: red"></i>
+          <i class="fa fa-cc-paypal fa-2x" style="color: blue"></i>
         </div>
-        <div id="payment-module">
-          <h3>Detaliile cosului tau</h3>
-          <input type="text" id="voucher-input" value="Voucher"/>
-          <button id="voucher-btn" class="btn-anim general-btn">Aplica voucherul</button>
-          <span id="voucher-validation-span" class="invisible">X</span>
-          <p>Total: <span id="total-span"></span></p>
-          <p>Metode de plata acceptate</p>
-          <div class="icon-container">
-            
-            <i class="fa fa-cc-visa fa-2x" style="color:navy;"></i>
-            <i class="fa fa-cc-mastercard fa-2x" style="color:red;"></i>
-            <i class="fa fa-cc-paypal fa-2x" style="color: blue;"></i>
-          </div>
-          <button class="btn-anim general-btn ">Plateste</button>
-        </div>
+        <button class="btn-anim general-btn">Plateste</button>
+      </div>
     </main>
-
-      
 
     <footer class="footer">
       <div class="left-side">
@@ -85,7 +84,11 @@
       <div class="right-side">
         <ul>
           <li>
-            <a class="facebook" href="https://www.facebook.com/designedmemoriesstore" target="_blank">
+            <a
+              class="facebook"
+              href="https://www.facebook.com/designedmemoriesstore"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -94,7 +97,11 @@
             </a>
           </li>
           <li>
-            <a class="instagram" href="https://www.instagram.com/designedmemoriesstore/" target="_blank">
+            <a
+              class="instagram"
+              href="https://www.instagram.com/designedmemoriesstore/"
+              target="_blank"
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -114,9 +121,9 @@
         </ul>
       </div>
     </footer>
-  
-      <script src="./backend/index.js"></script>
-      <script src="./js/common-scripts.js"></script>
-      <script src="./js/cart.js"></script>
-    </body>
-  </html>
+
+    <script src="./backend/index.js"></script>
+    <script src="./js/common-scripts.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>

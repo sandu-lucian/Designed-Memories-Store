@@ -16,21 +16,22 @@ let displayStyle = "card";
     .then((r) => {
       renderProductsList(r, displayStyle);
       prodsList = r;
-    }).then(() => {
+    })
+    .then(() => {
       fetch("http://localhost:3000/api/products/favorites")
-    .then((r) => r.json())
-    .then((r) => {
-      favoritesList = r;
-      tagFavorites(favoritesList)
-    });
+        .then((r) => r.json())
+        .then((r) => {
+          favoritesList = r;
+          tagFavorites(favoritesList);
+        });
     });
 })();
 
 function tagFavorites(data) {
   data.forEach((el) => {
     let heart = document.getElementById(`${el.id}`);
-    heart.getElementsByClassName('fa')[0].classList.add('fa-heart');
-    heart.getElementsByClassName('fa')[0].classList.remove('fa-heart-o');
+    heart.getElementsByClassName("fa")[0].classList.add("fa-heart");
+    heart.getElementsByClassName("fa")[0].classList.remove("fa-heart-o");
   });
 }
 
@@ -166,37 +167,40 @@ document.querySelector("#sort").addEventListener("click", function (event) {
 });
 
 productsList.addEventListener("click", function (event) {
-  let selectedObj = prodsList.filter(p => p.id === event.target.value);
-  
-  if(event.target.classList.contains("fa-heart-o")) {
+  let selectedObj = prodsList.filter((p) => p.id === event.target.value);
+
+  if (event.target.classList.contains("fa-heart-o")) {
     event.target.classList.remove("fa-heart-o");
     event.target.classList.add("fa-heart");
     fetch(`http://localhost:3000/api/products/favorites/${selectedObj[0].id}`, {
-      method: "POST"
-    })
+      method: "POST",
+    });
   } else if (event.target.classList.contains("fa-heart")) {
     event.target.classList.remove("fa-heart");
     event.target.classList.add("fa-heart-o");
     fetch(`http://localhost:3000/api/products/favorites/${selectedObj[0].id}`, {
-      method: "DELETE"
-    })
+      method: "DELETE",
+    });
   }
 
-  if(event.target.classList.contains("card") || event.target.classList.contains("list")) {
+  if (
+    event.target.classList.contains("card") ||
+    event.target.classList.contains("list")
+  ) {
     window.location = `./productViewer.html?id=${event.target.id}`;
-}
+  }
 
-  if(event.target.name === "cartBtn") {
+  if (event.target.name === "cartBtn") {
     fetch(`http://localhost:3000/api/products/cart/${event.target.value}`, {
-      method: "POST"
-    })
+      method: "POST",
+    });
   }
 });
 
-document.getElementById("list-btn").addEventListener("click", function(e) {
+document.getElementById("list-btn").addEventListener("click", function (e) {
   productsList.innerHTML = "";
   displayStyle = "list";
-  if(selectedFilter.length === 0) {
+  if (selectedFilter.length === 0) {
     renderProductsList(prodsList, displayStyle);
   } else {
     renderProductsList(filteredList, displayStyle);
@@ -205,14 +209,14 @@ document.getElementById("list-btn").addEventListener("click", function(e) {
     .then((r) => r.json())
     .then((r) => {
       favoritesList = r;
-      tagFavorites(favoritesList)
-})
+      tagFavorites(favoritesList);
+    });
 });
 
-document.getElementById("card-btn").addEventListener("click", function(e) {
+document.getElementById("card-btn").addEventListener("click", function (e) {
   productsList.innerHTML = "";
   displayStyle = "card";
-  if(selectedFilter.length === 0) {
+  if (selectedFilter.length === 0) {
     renderProductsList(prodsList, displayStyle);
   } else {
     renderProductsList(filteredList, displayStyle);
@@ -221,8 +225,8 @@ document.getElementById("card-btn").addEventListener("click", function(e) {
     .then((r) => r.json())
     .then((r) => {
       favoritesList = r;
-      tagFavorites(favoritesList)
-})
+      tagFavorites(favoritesList);
+    });
 });
 
 searchbar.addEventListener("keyup", function (e) {
@@ -240,6 +244,8 @@ searchbar.addEventListener("keyup", function (e) {
   renderProductsList(searchList, displayStyle);
 });
 
-document.getElementById("logout-btn").addEventListener("click", function(event) {
-  handleLogout();
-})
+document
+  .getElementById("logout-btn")
+  .addEventListener("click", function (event) {
+    handleLogout();
+  });

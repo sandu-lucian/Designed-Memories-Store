@@ -25,12 +25,22 @@ function renderFavList(data, type) {
 
     let deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Sterge din favorite";
-    deleteBtn.classList.add("btn-anim", "delete-btn", "general-btn-alert", "favorites-btn");
+    deleteBtn.classList.add(
+      "btn-anim",
+      "delete-btn",
+      "general-btn-alert",
+      "favorites-btn"
+    );
     deleteBtn.value = `${data[i].id}`;
 
     let addToCartBtn = document.createElement("button");
     addToCartBtn.innerText = "Adauga in cos";
-    addToCartBtn.classList.add("btn-anim", "add-to-cart-btn", "general-btn", "favorites-btn");
+    addToCartBtn.classList.add(
+      "btn-anim",
+      "add-to-cart-btn",
+      "general-btn",
+      "favorites-btn"
+    );
     addToCartBtn.value = `${data[i].id}`;
 
     productDiv.appendChild(prodImg);
@@ -44,22 +54,29 @@ function renderFavList(data, type) {
   }
 }
 
-fetch("http://localhost:3000/api/products/favorites").then(r => r.json()).then(r => renderFavList(r, "list"));
+fetch("http://localhost:3000/api/products/favorites")
+  .then((r) => r.json())
+  .then((r) => renderFavList(r, "list"));
 
-favList.addEventListener("click", function(event) {
-  if(event.target.classList.contains("delete-btn")) {
-    fetch(`http://localhost:3000/api/products/favorites/${event.target.value}`, {
-      method: "DELETE"
-    }).then(r => r.json()).then(r => renderFavList(r, "list"));
+favList.addEventListener("click", function (event) {
+  if (event.target.classList.contains("delete-btn")) {
+    fetch(
+      `http://localhost:3000/api/products/favorites/${event.target.value}`,
+      {
+        method: "DELETE",
+      }
+    )
+      .then((r) => r.json())
+      .then((r) => renderFavList(r, "list"));
   }
-  
-  if(event.target.classList.contains("list")) {
+
+  if (event.target.classList.contains("list")) {
     window.location = `./productViewer.html?id=${event.target.id}`;
   }
 
-  if(event.target.classList.contains("add-to-cart-btn")) {
+  if (event.target.classList.contains("add-to-cart-btn")) {
     fetch(`http://localhost:3000/api/products/cart/${event.target.value}`, {
-      method: "POST"
-    })
+      method: "POST",
+    });
   }
-})
+});
