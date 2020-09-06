@@ -1,7 +1,7 @@
 function handleLogout(event) {
   window.sessionStorage.clear();
   window.location.reload(true);
-  window.location.replace("/DM/index.html");
+  window.location.replace("/index.html");
 }
 
 function displayDropdownMenu() {
